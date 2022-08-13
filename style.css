@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #ffedd5;
+  background-color: #f0e6d8;
   font-family: 'Robot', sans-serif;
 }
 
@@ -15,12 +15,17 @@ ul {
 
 /* Fontes: */
 h1,
-h2,
 h3,
 .price {
   font-family: 'Robot Serif', serif;
   text-transform: uppercase;
   color: #2d2c2a;
+}
+
+h2 {
+  font-family: 'Robot Serif', serif;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 /* Cabeçalho: */
@@ -36,7 +41,7 @@ header h1 {
 }
 
 header h1 span {
-  color: #995000;
+  color: #8d7150;
 }
 
 header p {
@@ -58,7 +63,7 @@ header {
 }
 
 section h2 {
-  background-color: #fed7aa;
+  background-color: #8d7150;
   padding: 8px 16px;
   text-align: center;
 
