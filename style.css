@@ -1,3 +1,4 @@
+
 /* Geral: */
 * {
   margin: 0;
@@ -8,6 +9,8 @@ body {
   background-color: #f0e6d8;
   font-family: 'Robot', sans-serif;
 }
+
+
 
 ul {
   list-style: none;
@@ -26,6 +29,95 @@ h2 {
   font-family: 'Robot Serif', serif;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+/* Menu: */
+.menu {
+  font-family: 'Robot Serif', serif;
+  text-transform: uppercase;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.menu-faketrigger {
+  position: absolute;
+  z-index: 1000;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.menu .menu-lines {
+  position: absolute;
+  z-index: 999;
+  width: 35px;
+  height: 35px;
+}
+
+.menu .menu-lines span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #2d2c2a;
+  border-radius: 3px;
+  transition: all ease .2s;
+}
+
+/*
+checked serve para adicionar efeitos aos input/checkbox.
+~ serve para acessar itens no mesmo nível.
+*/
+.menu .menu-faketrigger:checked~.menu-lines span {
+  background-color: #2d2c2a;
+}
+
+.menu .menu-faketrigger:checked~.menu-lines span:nth-child(1) {
+  transform-origin: 0% 0%;
+  transform: rotate(45deg) scaleX(1.25);
+}
+
+.menu .menu-faketrigger:checked~.menu-lines span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu .menu-faketrigger:checked~.menu-lines span:nth-child(3) {
+  transform-origin: 0% 100%;
+  transform: rotate(-45deg) scaleX(1.25);
+}
+
+.menu ul {
+  position: absolute;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: cal(100vh - 100px);
+  padding-top: 100px;
+  background-color: #f0e6d8;
+  margin-left: -300px;
+  transition: all ease .2s;
+}
+
+.menu .menu-faketrigger:checked~ul {
+  margin-left: 0;
+}
+
+.menu ul li {
+  padding: 10px 30px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
+  transition: all ease .3s
+;
+}
+
+.menu ul li a:hover {
+  color: #3f3e3a;
 }
 
 /* Cabeçalho: */
